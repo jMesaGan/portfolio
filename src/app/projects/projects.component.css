@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+
+.super-big-intro {
+  font-family: "League Gothic", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 70px;
+  margin-left: 150px;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  font-family: 'Roboto Black', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #333;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-family: 'Roboto Black', sans-serif;
+  font-weight: 200;
+  font-size: 1.2em;
+  color: #333;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.project-icon {
+  width: 50px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.encapsulate-project {
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  margin-left: 150px;
+  margin-right: 550px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  margin: 0.2em;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #E88D67;
+  border-radius: 0.25em;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+}
+
+.project-technologies {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+
+.tech-icon {
+  width: 35px;
+  margin-right: 5px;
+  vertical-align: middle;
+}

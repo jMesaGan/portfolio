@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+.super-big-intro {
+  font-family: "League Gothic", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 70px;
+  margin-left: 150px;
+  margin-bottom: 10px;
+}
+
+.text-all-in-right {
+  text-align: left;
+  font-family: 'Roboto Black', sans-serif;
+  font-weight: 200;
+  margin-right: auto;
+  margin-left: 150px;
+  font-size: 1.2em;
+  color: #333;
+  width: 400px;
+  word-wrap: break-word;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+}
+
+.profile-image {
+  width: 250px;
+  float: right;
+  margin-right: 350px;
+  margin-bottom: 200px;
+  border-radius: 5%;
+}

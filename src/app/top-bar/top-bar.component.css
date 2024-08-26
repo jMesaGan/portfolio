@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(204, 204, 204, 0);
+  backdrop-filter: blur(7px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  font-family: 'Roboto Black', sans-serif;
+  font-weight: 900;
+  animation: slideInFromTop 1.5s ease-out;
+  border-bottom: #404040 1px solid;
+}
+
+.name {
+  margin-left: 10px;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+}
+
+.title {
+  font-family: 'Roboto Black', sans-serif;
+  font-weight: 200;
+  margin-right: auto;
+  margin-left: 35px;
+  font-size:10px;
+}
+
+.nav-menu {
+  margin-right: 10px;
+}

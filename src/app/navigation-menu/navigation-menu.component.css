@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&display=swap');
+body {
+  background: #F3F7EC;
+}
+button {
+  width: 55px;
+  height: 25px;
+  color: #000000;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Roboto Black', sans-serif;
+  font-weight: 200;
+  background: transparent;
+  cursor: pointer;
+  margin: 0 10px; /* Add consistent space between buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the text within the button */
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-bottom: 2px solid #006989;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  font-style: normal;
+}
+
+button:hover::before {
+  width: 85%;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+a{
+  text-decoration: none;
+}
+

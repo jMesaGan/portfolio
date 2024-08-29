@@ -1,13 +1,24 @@
-<p class="super-big-intro">Projects & work experience</p>
-<div *ngFor="let project of projects" class="encapsulate-project">
-  <div class="project-details">
-    <p class="project-title">{{ project.name }}</p>
-    <p class="project-description">{{ project.description }}</p>
-    <div class="project-technologies">
-      <span *ngFor="let tech of project.technologies" class="badge">
-        <img [src]="tech.icon" alt="{{ tech.name }} icon" class="tech-icon">
-        {{ tech.name }}
-      </span>
+<div class="project-wrapper">
+  <p class="super-big-intro">Projects & work experience</p>
+  <div class="encapsulate-project">
+    <div class="project-details" [ngClass]="{'animate': animate}">
+      <p class="project-title">{{ projects[currentProjectIndex].name }}</p>
+      <p class="project-description">{{ projects[currentProjectIndex].description }}</p>
+      <div class="project-technologies">
+        <span *ngFor="let tech of projects[currentProjectIndex].technologies; let i = index"
+              class="badge"
+              [ngStyle]="{'animation-delay': (i * 0.5) + 's'}">
+          <img [src]="tech.icon" alt="{{ tech.name }} icon" class="tech-icon">
+          {{ tech.name }}
+        </span>
+      </div>
+    </div>
+    <div class="slider-buttons-container">
+      <button class="slider-button" [ngClass]="{'active': activeButtonIndex === 0}" (click)="setIndex(0)"></button>
+      <button class="slider-button" [ngClass]="{'active': activeButtonIndex === 1}" (click)="setIndex(1)"></button>
+      <button class="slider-button" [ngClass]="{'active': activeButtonIndex === 2}" (click)="setIndex(2)"></button>
+      <button class="slider-button" [ngClass]="{'active': activeButtonIndex === 3}" (click)="setIndex(3)"></button>
+      <button class="slider-button" [ngClass]="{'active': activeButtonIndex === 4}" (click)="setIndex(4)"></button>
     </div>
   </div>
 </div>

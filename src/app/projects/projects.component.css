@@ -7,8 +7,10 @@
   font-weight: 200;
   font-style: normal;
   font-size: 70px;
-  margin-left: 150px;
-  margin-bottom: 10px;
+  text-align: center;
+  padding-left: 0;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .project-title {
@@ -38,8 +40,18 @@
 .encapsulate-project {
   border-top: 1px solid #333;
   padding-top: 10px;
-  margin-left: 150px;
-  margin-right: 550px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .badge {
@@ -53,6 +65,8 @@
   border-radius: 0.25em;
   font-weight: 400;
   font-family: "Oswald", sans-serif;
+  opacity: 0; /* Ensure initial state is hidden */
+  animation: slide-in 0.5s ease-in-out forwards;
 }
 
 .project-technologies {
@@ -67,4 +81,63 @@
   width: 35px;
   margin-right: 5px;
   vertical-align: middle;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.project-details.animate {
+  animation: slide-left 0.5s ease-in-out;
+}
+
+.project-wrapper{
+  margin-bottom: 250px;
+}
+
+
+.slider-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slider-button {
+  background-color: transparent;
+  border: 2px solid #E88D67;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.1s ease, border-color 0.1s ease;
+}
+
+.slider-button.active {
+  background-color: #E88D67;
+  width: 25px;
+  height: 25px;
+  border: none;
+}
+
+.slider-button:hover {
+  transform: scale(1.2);
+  border-color: #006989;
+}
+
+@keyframes fill-inside-out {
+  0% {
+    background-color: #006989;
+  }
+  100% {
+    background-color: #E88D67;
+  }
 }

@@ -1,17 +1,24 @@
-import { Component } from '@angular/core';
-import { NgForOf } from "@angular/common";
+import { Component, ChangeDetectorRef } from '@angular/core';
+import {NgClass, NgForOf, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    NgClass,
+    NgStyle,
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
 
 export class ProjectsComponent {
+  animate = false;
+  currentProjectIndex = 0;
+  activeButtonIndex = 0;
+  constructor(private cdr: ChangeDetectorRef) {
+  }
 
   languages = [{
   name: 'Typescript',
@@ -103,4 +110,20 @@ export class ProjectsComponent {
       ]
     }
   ];
+
+  setIndex(index: number) {
+    this.currentProjectIndex = index;
+    this.activeButtonIndex = index;
+    this.setProject();
+  }
+
+  setProject() {
+    this.animate = false;
+    this.cdr.detectChanges();
+    setTimeout(() => {
+      this.currentProjectIndex = (this.currentProjectIndex) % this.projects.length;
+      this.animate = true;
+      this.cdr.detectChanges();
+    }, 0);
+  }
 }
